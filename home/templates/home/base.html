@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'home/style.css' %}">
+	
+</head>
+<body>
+	<div class="menu">
+		<ul>
+			<li><a href="{% url 'home:home' %}">Home</a></li>
+			<li><a href="{% url 'blog:blog' %}">Blog</a></li>
+			<li><a href="{% url 'product:product' %}">Product</a></li>
+			<li><a href="{% url 'contact:contact' %}">Contact</a></li>
+		</ul>
+	</div>
+	<div class="content">
+		{% block content%}
+		
+		{% endblock%}
+	</div>
+	
+
+</body>
+</html>
